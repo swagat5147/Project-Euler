@@ -16,7 +16,7 @@ public class eul5
 				b++;
 				if(b==20)
 				{
-					System.out.println("the lcm of numbers from 1 to 20 is: "+a);
+					System.out.println(a);
 					break;
 				}
 			}

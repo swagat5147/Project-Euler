@@ -15,7 +15,7 @@ public class eul1
 				sum=sum+i;
 			}
 		}
-		System.out.println("sum of multiples of 3 and 5 below 1000 is: "+sum);
+		System.out.println(sum);
 	}
 
 }

@@ -5,34 +5,39 @@ What is the largest prime factor of the number 600851475143 ?*/
 public class eul3 
 {
 
-	public static void main(String[] args) 
-	{
+	public static boolean is_Prime(long n) {
+		if (n < 2) {
+			return false;
+		}
+		if (n == 2) {
+			return true;
+		}
+		if (n % 2 == 0) {
+			return false;
+		}
+		for (int i = 3; i <= Math.sqrt(n) + 1; i+=2) {
+			if (n % i == 0) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public static void main (String[]args) {
 		long n=600851475143l;
-		long i,max=0l;
-		int j;
-		for(i=2l;i<=n;i++) 
+		long i;
+		long max = 0;
+		for(i = 2; i <=n; i++)
 		{
-			if(n%i==0)
-			{   
-				for(j=1;j<=Math.sqrt(i);j++)
+			if(n%i == 0)
+			{
+				n/=i;
+				if(is_Prime(i))
 				{
-					if(j%i==0)
-					{
-						break;
-					}
-					else
-					{
-						while(n%i==0)
-						{
-							n=n/i;
-							max=i;
-						}
-					}
+					max = i;
 				}
 			}
-	    }
-		System.out.println("largest prime factor is: "+max);
-
-     }
-
+		}	
+		System.out.println(max);
+	}
 }
