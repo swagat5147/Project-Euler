@@ -22,7 +22,7 @@ public class eul5
 			}
 			else
 			{
-				a++;
+				a+=2520;
 				b=11;
 			}
 		}

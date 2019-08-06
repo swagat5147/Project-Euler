@@ -35,7 +35,7 @@ public class eul7 {
 			}
 
 		}
-		System.out.println("The 10001st prime number is: "+n);
+		System.out.println(n);
 	}
 
 }

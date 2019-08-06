@@ -23,7 +23,7 @@ public class eul2
 			b = a+b;
 			a = c;
 		}
-		System.out.println("sum of even fibonacci numbers below 4 million: "+sum);
+		System.out.println(sum);
 	}
 
 }
